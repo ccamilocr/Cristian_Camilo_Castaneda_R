@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark" data-lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cristian Camilo Castañeda R. — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── THEMES ── */
+    :root {
+      --accent:  #00d4aa;
+      --accent2: #7c6af7;
+      --accent3: #f7a24e;
+      --kw: #ff7b72;
+      --fn: #d2a8ff;
+      --st: #a5d6ff;
+      --transition: background .3s, color .3s, border-color .3s;
+    }
+
+    [data-theme="dark"] {
+      --bg:       #0d1117;
+      --surface:  #161b22;
+      --surface2: #1c2330;
+      --border:   #30363d;
+      --text:     #e6edf3;
+      --muted:    #8b949e;
+      --header-bg: rgba(13,17,23,0.88);
+      --cm: #8b949e;
+      --shadow: 0 4px 24px rgba(0,0,0,.4);
+    }
+
+    [data-theme="light"] {
+      --bg:       #f6f8fa;
+      --surface:  #ffffff;
+      --surface2: #f0f2f5;
+      --border:   #d0d7de;
+      --text:     #1f2328;
+      --muted:    #656d76;
+      --header-bg: rgba(246,248,250,0.92);
+      --cm: #6e7781;
+      --shadow: 0 4px 24px rgba(0,0,0,.08);
+    }
+
+    *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+    html { scroll-behavior:smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Sora', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      min-height: 100vh;
+      transition: var(--transition);
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top:0; z-index:100;
+      background: var(--header-bg);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex; align-items:center; justify-content:space-between;
+      height: 56px;
+      transition: var(--transition);
+    }
+
+    .logo {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; color: var(--accent); letter-spacing:.05em;
+      white-space: nowrap;
+    }
+
+    .header-right { display:flex; align-items:center; gap:.5rem; flex-wrap:wrap; }
+
+    nav { display:flex; gap:.2rem; }
+    nav a {
+      font-family:'JetBrains Mono',monospace; font-size:11px;
+      color:var(--muted); text-decoration:none;
+      padding:5px 10px; border-radius:6px;
+      transition:color .2s, background .2s;
+    }
+    nav a:hover { color:var(--text); background:var(--surface2); }
+
+    /* ── CONTROLS ── */
+    .controls { display:flex; align-items:center; gap:.4rem; }
+
+    .lang-switcher {
+      display: flex; border:1px solid var(--border); border-radius:8px; overflow:hidden;
+    }
+    .lang-btn {
+      font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:600;
+      padding:4px 10px; background:transparent; border:none; cursor:pointer;
+      color:var(--muted); transition:background .2s, color .2s;
+    }
+    .lang-btn.active { background:var(--accent); color:#000; }
+    .lang-btn:not(.active):hover { background:var(--surface2); color:var(--text); }
+
+    .theme-btn {
+      width:34px; height:34px; border-radius:8px;
+      border:1px solid var(--border); background:var(--surface2);
+      cursor:pointer; font-size:16px;
+      display:flex; align-items:center; justify-content:center;
+      transition:background .2s, border-color .2s;
+    }
+    .theme-btn:hover { border-color:var(--accent); }
+
+    /* ── MAIN ── */
+    main { max-width:860px; margin:0 auto; padding:3rem 1.5rem 6rem; }
+
+    /* ── CELLS ── */
+    .cell {
+      margin-bottom:2rem;
+      opacity:0; transform:translateY(16px);
+      animation:fadeUp .5s ease forwards;
+    }
+    .cell:nth-child(1)  { animation-delay:.04s }
+    .cell:nth-child(2)  { animation-delay:.10s }
+    .cell:nth-child(3)  { animation-delay:.16s }
+    .cell:nth-child(4)  { animation-delay:.22s }
+    .cell:nth-child(5)  { animation-delay:.28s }
+    .cell:nth-child(6)  { animation-delay:.34s }
+    .cell:nth-child(7)  { animation-delay:.40s }
+    .cell:nth-child(8)  { animation-delay:.46s }
+    .cell:nth-child(9)  { animation-delay:.52s }
+    .cell:nth-child(10) { animation-delay:.58s }
+    .cell:nth-child(11) { animation-delay:.64s }
+    .cell:nth-child(12) { animation-delay:.70s }
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+
+    .cell-header { display:flex; align-items:center; gap:.7rem; margin-bottom:.4rem; }
+    .cell-type {
+      font-family:'JetBrains Mono',monospace; font-size:10px; font-weight:700;
+      padding:2px 8px; border-radius:4px; letter-spacing:.08em;
+    }
+    .cell-type.in  { color:#00d4aa; background:rgba(0,212,170,.12); }
+    .cell-type.out { color:#7c6af7; background:rgba(124,106,247,.12); }
+    .cell-num { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); }
+
+    .code-block {
+      background:var(--surface); border:1px solid var(--border);
+      border-left:3px solid var(--accent); border-radius:10px;
+      padding:1.1rem 1.4rem;
+      font-family:'JetBrains Mono',monospace; font-size:13px; line-height:1.85;
+      white-space:pre-wrap; transition:var(--transition);
+    }
+    .output-block {
+      background:var(--surface); border:1px solid var(--border);
+      border-left:3px solid var(--accent2); border-radius:10px;
+      padding:1.5rem; transition:var(--transition);
+    }
+
+    /* SYNTAX */
+    .kw  { color:var(--kw); }
+    .fn  { color:var(--fn); }
+    .st  { color:var(--st); }
+    .cm  { color:var(--cm); font-style:italic; }
+    .num { color:var(--accent3); }
+
+    /* Light mode syntax overrides */
+    [data-theme="light"] .kw  { color:#cf222e; }
+    [data-theme="light"] .fn  { color:#8250df; }
+    [data-theme="light"] .st  { color:#0550ae; }
+
+    /* ── HERO ── */
+    .hero { display:flex; align-items:center; gap:2rem; flex-wrap:wrap; }
+    .avatar-wrap { position:relative; flex-shrink:0; }
+    .avatar {
+      width:110px; height:110px; border-radius:50%;
+      border:3px solid var(--accent);
+      background:var(--surface2);
+      display:flex; align-items:center; justify-content:center;
+      font-size:2.8rem;
+    }
+    .avatar-ring {
+      position:absolute; inset:-7px; border-radius:50%;
+      border:2px dashed rgba(0,212,170,.35);
+      animation:spin 12s linear infinite;
+    }
+    @keyframes spin { to { transform:rotate(360deg); } }
+
+    .hero-info h1 {
+      font-size:1.75rem; font-weight:700; letter-spacing:-.02em;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    }
+    .tagline { color:var(--muted); font-size:14px; margin-top:.25rem; }
+    .badges  { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.75rem; }
+    .badge {
+      font-family:'JetBrains Mono',monospace; font-size:11px;
+      padding:3px 10px; border-radius:20px; border:1px solid;
+    }
+    .badge.green  { color:var(--accent);  border-color:rgba(0,212,170,.4);  background:rgba(0,212,170,.08); }
+    .badge.purple { color:var(--accent2); border-color:rgba(124,106,247,.4); background:rgba(124,106,247,.08); }
+    .badge.orange { color:var(--accent3); border-color:rgba(247,162,78,.4);  background:rgba(247,162,78,.08); }
+
+    /* ── SKILLS ── */
+    .skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(175px,1fr)); gap:1rem; }
+    .skill-card {
+      background:var(--surface2); border:1px solid var(--border); border-radius:10px;
+      padding:1rem; transition:border-color .2s, transform .2s, var(--transition);
+    }
+    .skill-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+    .s-icon { font-size:1.4rem; margin-bottom:.35rem; }
+    .s-name { font-size:13px; font-weight:600; margin-bottom:.5rem; }
+    .skill-bar { height:4px; background:var(--border); border-radius:2px; overflow:hidden; }
+    .skill-fill {
+      height:100%; border-radius:2px;
+      background:linear-gradient(90deg,var(--accent),var(--accent2));
+      animation:growBar 1.3s ease forwards;
+      transform-origin:left; transform:scaleX(0);
+    }
+    @keyframes growBar { to { transform:scaleX(1); } }
+    .skill-pct { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--muted); margin-top:4px; text-align:right; }
+
+    /* ── TIMELINE ── */
+    .timeline { position:relative; }
+    .timeline::before {
+      content:''; position:absolute; left:11px; top:0; bottom:0; width:2px;
+      background:linear-gradient(to bottom,var(--accent),var(--accent2)); border-radius:2px;
+    }
+    .t-item { padding-left:2.5rem; padding-bottom:1.75rem; position:relative; }
+    .t-item::before {
+      content:''; position:absolute; left:5px; top:5px;
+      width:14px; height:14px; border-radius:50%;
+      background:var(--accent); border:2px solid var(--bg);
+      box-shadow:0 0 8px var(--accent);
+    }
+    .t-role    { font-weight:600; font-size:14px; }
+    .t-company { font-size:13px; color:var(--accent); margin-top:1px; }
+    .t-date    { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); margin:3px 0 6px; }
+    .t-desc    { font-size:13px; color:var(--muted); line-height:1.6; }
+
+    /* ── PROJECTS ── */
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:1rem; }
+    .proj-card {
+      background:var(--surface2); border:1px solid var(--border); border-radius:10px;
+      padding:1.2rem; transition:border-color .2s, transform .2s, var(--transition);
+    }
+    .proj-card:hover { border-color:var(--accent2); transform:translateY(-3px); }
+    .proj-icon  { font-size:1.6rem; margin-bottom:.5rem; }
+    .proj-title { font-weight:600; font-size:14px; margin-bottom:.35rem; }
+    .proj-desc  { font-size:12px; color:var(--muted); line-height:1.6; }
+    .proj-tags  { display:flex; flex-wrap:wrap; gap:4px; margin-top:.75rem; }
+    .proj-tag {
+      font-family:'JetBrains Mono',monospace; font-size:10px;
+      padding:2px 7px; border-radius:4px;
+      background:rgba(124,106,247,.15); color:var(--accent2);
+      border:1px solid rgba(124,106,247,.25);
+    }
+
+    /* ── EDU TABLE ── */
+    .edu-table { width:100%; border-collapse:collapse; font-size:13px; }
+    .edu-table th {
+      font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted);
+      text-align:left; padding:6px 12px; border-bottom:1px solid var(--border);
+    }
+    .edu-table td { padding:10px 12px; border-bottom:1px solid var(--border); }
+    .edu-table tr:last-child td { border-bottom:none; }
+    .edu-table tr:hover td { background:var(--surface2); }
+    .edu-degree { font-weight:600; }
+    .edu-school { color:var(--muted); font-size:12px; }
+    .edu-year   { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent3); }
+    .edu-idx    { font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted); }
+
+    /* ── CONTACT ── */
+    .contact-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(195px,1fr)); gap:.75rem; }
+    .contact-card {
+      display:flex; align-items:center; gap:.75rem;
+      background:var(--surface2); border:1px solid var(--border); border-radius:10px;
+      padding:.9rem 1rem; text-decoration:none; color:var(--text);
+      transition:border-color .2s, transform .2s, var(--transition);
+    }
+    .contact-card:hover { border-color:var(--accent); transform:translateY(-2px); }
+    .c-icon  { font-size:1.4rem; }
+    .c-label { font-size:11px; color:var(--muted); }
+    .c-val   { font-size:13px; font-weight:600; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align:center; padding:2rem;
+      font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--muted);
+      border-top:1px solid var(--border);
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:var(--bg); }
+    ::-webkit-scrollbar-thumb { background:var(--border); border-radius:3px; }
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:640px){
+      .hero { flex-direction:column; text-align:center; }
+      nav { display:none; }
+      .logo { font-size:11px; }
+    }
+
+    /* ── MAP ── */
+    #map {
+      height: 340px; border-radius: 10px; overflow: hidden;
+      border: 1px solid var(--border); position: relative; z-index: 0;
+      transition: border-color .3s;
+    }
+    .map-info {
+      display: flex; align-items: center; gap: .75rem;
+      margin-top: 1rem; flex-wrap: wrap;
+    }
+    .map-coord {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--muted);
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; padding: 5px 12px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .map-coord b { color: var(--accent); font-weight: 700; }
+    .leaflet-popup-content-wrapper {
+      background: var(--surface) !important; color: var(--text) !important;
+      border: 1px solid var(--border) !important; border-radius: 10px !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,.35) !important;
+    }
+    .leaflet-popup-tip { background: var(--surface) !important; }
+    .leaflet-popup-content { font-family: 'Sora', sans-serif; font-size: 13px; line-height: 1.6; }
+    .popup-title { font-weight: 700; color: var(--accent); font-size: 14px; margin-bottom: 3px; }
+    .popup-sub   { color: var(--muted); font-size: 12px; }
+    .popup-coord { font-family: 'JetBrains Mono',monospace; font-size: 11px; color: var(--accent2); margin-top: 5px; }
+    [data-theme="dark"] .leaflet-tile-pane {
+      filter: brightness(.8) saturate(.85) invert(1) hue-rotate(180deg);
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+</head>
+<body>
+
+<header>
+  <span class="logo">ccamilocr<span style="color:var(--muted);">.ipynb</span></span>
+
+  <nav>
+    <a href="#about"      data-i18n="nav.about">About</a>
+    <a href="#skills"     data-i18n="nav.skills">Skills</a>
+    <a href="#experience" data-i18n="nav.exp">Exp.</a>
+    <a href="#projects"   data-i18n="nav.projects">Projects</a>
+    <a href="#contact"    data-i18n="nav.contact">Contact</a>
+  </nav>
+
+  <div class="header-right">
+    <div class="lang-switcher">
+      <button class="lang-btn active" data-lang="es">ES</button>
+      <button class="lang-btn"        data-lang="en">EN</button>
+      <button class="lang-btn"        data-lang="fr">FR</button>
+    </div>
+    <button class="theme-btn" id="themeToggle" title="Toggle theme">🌙</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- CELL 0 IN -->
+  <div class="cell" id="about">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[0]:</span></div>
+    <div class="code-block"><span class="cm" data-i18n="cell0.comment"># Portfolio — Cristian Camilo Castañeda R.</span>
+<span class="kw">from</span> humans <span class="kw">import</span> <span class="fn">Cristian_Camilo</span>
+
+profile = Cristian_Camilo.<span class="fn">describe</span>()
+<span class="fn">display</span>(profile)</div>
+  </div>
+
+  <!-- CELL 0 OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[0]:</span></div>
+    <div class="output-block">
+      <div class="hero">
+        <div class="avatar-wrap">
+          <div class="avatar">🧑‍💻</div>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="hero-info">
+          <h1>Cristian Camilo Castañeda R.</h1>
+          <p class="tagline" data-i18n="hero.tagline">GIS Analyst · Data Scientist · AI &amp; Automation Enthusiast</p>
+          <div class="badges">
+            <span class="badge green">📍 Niagara Falls, Ontario, Canada</span>
+            <span class="badge purple" data-i18n="badge.ai">🤖 AI-Driven Analysis</span>
+            <span class="badge orange">🗺 ArcGIS Expert</span>
+            <span class="badge green" data-i18n="badge.auto">⚙️ n8n Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELL MAP IN -->
+  <div class="cell" id="location">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[1]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">location</span>.<span class="fn">plot</span>(
+  lat=<span class="num">43.0896</span>, lon=<span class="num">-79.0849</span>,
+  label=<span class="st">"Niagara Falls, Ontario, Canada"</span>,
+  zoom=<span class="num">13</span>, tiles=<span class="st">"OpenStreetMap"</span>
+)</div>
+  </div>
+
+  <!-- CELL MAP OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[1]:</span></div>
+    <div class="output-block">
+      <div id="map"></div>
+      <div class="map-info">
+        <div class="map-coord">🌐 Lat <b>43.0896° N</b></div>
+        <div class="map-coord">🌐 Lon <b>79.0849° W</b></div>
+        <div class="map-coord">🏙 <b>Niagara Falls, ON, Canada</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELL 2 IN (skills) -->
+  <div class="cell" id="skills">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[2]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">skills</span>.<span class="fn">plot</span>(kind=<span class="st">"bar"</span>, show_level=<span class="kw">True</span>)</div>
+  </div>
+
+  <!-- CELL 2 OUT (skills) -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[2]:</span></div>
+    <div class="output-block">
+      <div class="skills-grid">
+        <div class="skill-card"><div class="s-icon">🗺️</div><div class="s-name">ArcGIS / QGIS</div><div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div><div class="skill-pct">95%</div></div>
+        <div class="skill-card"><div class="s-icon">🐍</div><div class="s-name">Python</div><div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div><div class="skill-pct">88%</div></div>
+        <div class="skill-card"><div class="s-icon">⚙️</div><div class="s-name">n8n Automation</div><div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div><div class="skill-pct">85%</div></div>
+        <div class="skill-card"><div class="s-icon">🤖</div><div class="s-name">AI &amp; LLMs</div><div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div><div class="skill-pct">80%</div></div>
+        <div class="skill-card"><div class="s-icon">📊</div><div class="s-name">Dashboards</div><div class="skill-bar"><div class="skill-fill" style="width:87%"></div></div><div class="skill-pct">87%</div></div>
+        <div class="skill-card"><div class="s-icon">🗄️</div><div class="s-name">SQL / Databases</div><div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div><div class="skill-pct">78%</div></div>
+        <div class="skill-card"><div class="s-icon">☁️</div><div class="s-name">Cloud &amp; APIs</div><div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div><div class="skill-pct">75%</div></div>
+        <div class="skill-card"><div class="s-icon">📈</div><div class="s-name" data-i18n="skill.data">Data Analysis</div><div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div><div class="skill-pct">90%</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELL 2 IN -->
+  <div class="cell" id="experience">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[2]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">experience</span>.<span class="fn">timeline</span>()</div>
+  </div>
+
+  <!-- CELL 2 OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[2]:</span></div>
+    <div class="output-block">
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-role"   data-i18n="exp.0.role">GIS Analyst &amp; Data Scientist</div>
+          <div class="t-company" data-i18n="exp.0.co">GIS Projects &amp; Consulting</div>
+          <div class="t-date">2022 — <span data-i18n="exp.present">Present</span></div>
+          <div class="t-desc"  data-i18n="exp.0.desc">Geospatial analysis with ArcGIS, workflow automation with Python and n8n, interactive dashboard development and AI-driven data analysis.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-role"   data-i18n="exp.1.role">Automation Specialist</div>
+          <div class="t-company" data-i18n="exp.1.co">AI &amp; Workflow Projects</div>
+          <div class="t-date">2021 — 2022</div>
+          <div class="t-desc"  data-i18n="exp.1.desc">Design and implementation of automation pipelines with n8n, API integration and language models to optimize business processes.</div>
+        </div>
+        <div class="t-item">
+          <div class="t-role"   data-i18n="exp.2.role">Data Analyst</div>
+          <div class="t-company" data-i18n="exp.2.co">Consulting &amp; Industry</div>
+          <div class="t-date">2019 — 2021</div>
+          <div class="t-desc"  data-i18n="exp.2.desc">Processing and visualization of geospatial data, technical report generation and data-driven decision support.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELL 3 IN -->
+  <div class="cell" id="projects">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[3]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">projects</span>.<span class="fn">featured</span>(limit=<span class="num">6</span>, sort_by=<span class="st">"impact"</span>)</div>
+  </div>
+
+  <!-- CELL 3 OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[3]:</span></div>
+    <div class="output-block">
+      <div class="projects-grid">
+        <div class="proj-card">
+          <div class="proj-icon">🗺️</div>
+          <div class="proj-title" data-i18n="proj.0.title">ArcGIS Geospatial Analysis</div>
+          <div class="proj-desc"  data-i18n="proj.0.desc">Advanced territorial mapping and analysis with ArcGIS Pro, geoprocess automation and dynamic cartography generation.</div>
+          <div class="proj-tags"><span class="proj-tag">ArcGIS</span><span class="proj-tag">Python</span><span class="proj-tag">GIS</span></div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">⚙️</div>
+          <div class="proj-title" data-i18n="proj.1.title">n8n Automation</div>
+          <div class="proj-desc"  data-i18n="proj.1.desc">End-to-end pipelines integrating APIs, databases and external services to optimize business workflows.</div>
+          <div class="proj-tags"><span class="proj-tag">n8n</span><span class="proj-tag">APIs</span><span class="proj-tag">Automation</span></div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">🤖</div>
+          <div class="proj-title" data-i18n="proj.2.title">AI-Driven Data Analysis</div>
+          <div class="proj-desc"  data-i18n="proj.2.desc">AI-powered analysis models to process large volumes of geospatial data and generate automated insights.</div>
+          <div class="proj-tags"><span class="proj-tag">LLMs</span><span class="proj-tag">Python</span><span class="proj-tag">AI</span></div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">📊</div>
+          <div class="proj-title" data-i18n="proj.3.title">Interactive Dashboards</div>
+          <div class="proj-desc"  data-i18n="proj.3.desc">Real-time data visualizations, territorial analysis and executive reports with multiple integrated data sources.</div>
+          <div class="proj-tags"><span class="proj-tag">Dashboard</span><span class="proj-tag">Viz</span><span class="proj-tag">BI</span></div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">🐍</div>
+          <div class="proj-title" data-i18n="proj.4.title">GIS Scripts with Python</div>
+          <div class="proj-desc"  data-i18n="proj.4.desc">Automation of complex spatial analyses using arcpy, geopandas and rasterio for massive data processing.</div>
+          <div class="proj-tags"><span class="proj-tag">arcpy</span><span class="proj-tag">geopandas</span><span class="proj-tag">rasterio</span></div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-icon">🔗</div>
+          <div class="proj-title" data-i18n="proj.5.title">API &amp; ETL Integration</div>
+          <div class="proj-desc"  data-i18n="proj.5.desc">Orchestration of multiple data sources via REST APIs, ETL transformation and loading into spatial databases.</div>
+          <div class="proj-tags"><span class="proj-tag">REST API</span><span class="proj-tag">ETL</span><span class="proj-tag">PostGIS</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELL 4 IN -->
+  <div class="cell" id="education">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[4]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">education</span>.<span class="fn">to_dataframe</span>()</div>
+  </div>
+
+  <!-- CELL 4 OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[4]:</span></div>
+    <div class="output-block">
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th data-i18n="edu.col.title">Title / Certification</th>
+            <th data-i18n="edu.col.inst">Institution</th>
+            <th data-i18n="edu.col.year">Year</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="edu-idx">0</td>
+            <td><div class="edu-degree" data-i18n="edu.0.deg">Science / Engineering</div><div class="edu-school">Universidad — Colombia</div></td>
+            <td style="font-size:13px;color:var(--muted);" data-i18n="edu.0.type">Undergraduate</td>
+            <td><span class="edu-year">2019</span></td>
+          </tr>
+          <tr>
+            <td class="edu-idx">1</td>
+            <td><div class="edu-degree" data-i18n="edu.1.deg">GIS &amp; Remote Sensing</div><div class="edu-school">Esri / ArcGIS Training</div></td>
+            <td style="font-size:13px;color:var(--muted);" data-i18n="edu.cert">Certification</td>
+            <td><span class="edu-year">2021</span></td>
+          </tr>
+          <tr>
+            <td class="edu-idx">2</td>
+            <td><div class="edu-degree">Data Science &amp; Machine Learning</div><div class="edu-school">Coursera / Platzi</div></td>
+            <td style="font-size:13px;color:var(--muted);" data-i18n="edu.cert">Certification</td>
+            <td><span class="edu-year">2022</span></td>
+          </tr>
+          <tr>
+            <td class="edu-idx">3</td>
+            <td><div class="edu-degree">AI &amp; Automation (n8n, LLMs)</div><div class="edu-school" data-i18n="edu.3.school">Self-taught / Real projects</div></td>
+            <td style="font-size:13px;color:var(--muted);" data-i18n="edu.practice">Practice</td>
+            <td><span class="edu-year">2023–2025</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- CELL 5 IN -->
+  <div class="cell" id="contact">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[5]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">contact</span>.<span class="fn">links</span>()</div>
+  </div>
+
+  <!-- CELL 5 OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[5]:</span></div>
+    <div class="output-block">
+      <div class="contact-grid">
+        <a class="contact-card" href="https://www.linkedin.com/in/ccamilocr/" target="_blank" rel="noopener">
+          <span class="c-icon">💼</span>
+          <div><div class="c-label">LinkedIn</div><div class="c-val">ccamilocr</div></div>
+        </a>
+        <a class="contact-card" href="https://github.com/ccamilocr" target="_blank" rel="noopener">
+          <span class="c-icon">🐙</span>
+          <div><div class="c-label">GitHub</div><div class="c-val">ccamilocr</div></div>
+        </a>
+        <a class="contact-card" href="mailto:tucorreo@email.com">
+          <span class="c-icon">✉️</span>
+          <div><div class="c-label">Email</div><div class="c-val" data-i18n="contact.email">Write me</div></div>
+        </a>
+        <a class="contact-card" href="https://github.com/ccamilocr/Cristian_Camilo_Castaneda_R" target="_blank" rel="noopener">
+          <span class="c-icon">📁</span>
+          <div><div class="c-label" data-i18n="contact.portfolio">Portfolio</div><div class="c-val" data-i18n="contact.repo">Repository</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CELL 6 IN -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type in">IN</span><span class="cell-num">[6]:</span></div>
+    <div class="code-block">Cristian_Camilo.<span class="fn">website</span>.<span class="fn">info</span>()</div>
+  </div>
+
+  <!-- CELL 6 OUT -->
+  <div class="cell">
+    <div class="cell-header"><span class="cell-type out">OUT</span><span class="cell-num">[6]:</span></div>
+    <div class="output-block">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cm);font-style:italic;line-height:2.1;">
+        <span style="color:var(--kw);">"""</span><br>
+        <span data-i18n="info.line1">Portfolio · Cristian Camilo Castañeda R.</span><br>
+        <span data-i18n="info.line2">Built with HTML5 + CSS3 — No frameworks</span><br><br>
+        <span data-i18n="info.spec">Specialties:</span><br>
+        &nbsp;&nbsp;→ ArcGIS &amp; QGIS  — <span data-i18n="info.s1">Geospatial Analysis</span><br>
+        &nbsp;&nbsp;→ Python        — <span data-i18n="info.s2">Scripting &amp; Data Science</span><br>
+        &nbsp;&nbsp;→ n8n           — <span data-i18n="info.s3">Workflow Automation</span><br>
+        &nbsp;&nbsp;→ AI / LLMs     — <span data-i18n="info.s4">AI-Driven Analysis</span><br>
+        &nbsp;&nbsp;→ Dashboards    — <span data-i18n="info.s5">Interactive Visualization</span><br><br>
+        <span data-i18n="info.inspired">Design inspired by Jupyter Notebooks</span><br>
+        <span data-i18n="info.hosted">Ready for GitHub Pages</span><br>
+        <span style="color:var(--kw);">"""</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2025 Cristian Camilo Castañeda R. — <span data-i18n="footer">Built with 💚 and pure HTML5 / CSS3</span>
+</footer>
+
+<script>
+// ══════════════════════════════════════════
+//  i18n DICTIONARY
+// ══════════════════════════════════════════
+const i18n = {
+  es: {
+    "nav.about":    "About",
+    "nav.skills":   "Skills",
+    "nav.exp":      "Exp.",
+    "nav.projects": "Proyectos",
+    "nav.contact":  "Contacto",
+    "cell0.comment":"# Portafolio — Cristian Camilo Castañeda R.",
+    "hero.tagline": "Analista GIS · Científico de Datos · Entusiasta de IA y Automatización",
+    "badge.ai":     "🤖 Análisis con IA",
+    "badge.auto":   "⚙️ Automatización n8n",
+    "skill.data":   "Análisis de Datos",
+    "exp.0.role":   "Analista GIS &amp; Científico de Datos",
+    "exp.0.co":     "Proyectos GIS &amp; Consultoría",
+    "exp.present":  "Presente",
+    "exp.0.desc":   "Análisis geoespacial con ArcGIS, automatización de flujos con Python y n8n, desarrollo de dashboards interactivos y análisis de datos impulsado por IA.",
+    "exp.1.role":   "Especialista en Automatización",
+    "exp.1.co":     "Proyectos AI &amp; Flujos de Trabajo",
+    "exp.1.desc":   "Diseño e implementación de pipelines de automatización con n8n, integración de APIs y modelos de lenguaje para optimizar procesos empresariales.",
+    "exp.2.role":   "Analista de Datos",
+    "exp.2.co":     "Consultoría e Industria",
+    "exp.2.desc":   "Procesamiento y visualización de datos geoespaciales, generación de reportes técnicos y soporte a decisiones basadas en datos.",
+    "proj.0.title": "Análisis Geoespacial ArcGIS",
+    "proj.0.desc":  "Mapeo y análisis territorial avanzado con ArcGIS Pro, automatización de geoprocesos y generación de cartografía dinámica.",
+    "proj.1.title": "Automatización con n8n",
+    "proj.1.desc":  "Pipelines end-to-end que integran APIs, bases de datos y servicios externos para optimizar flujos de trabajo empresariales.",
+    "proj.2.title": "Análisis de Datos con IA",
+    "proj.2.desc":  "Modelos de análisis impulsados por IA para procesar grandes volúmenes de datos geoespaciales y generar insights automatizados.",
+    "proj.3.title": "Dashboards Interactivos",
+    "proj.3.desc":  "Visualizaciones en tiempo real, análisis territorial y reportes ejecutivos con múltiples fuentes de datos integradas.",
+    "proj.4.title": "Scripts GIS con Python",
+    "proj.4.desc":  "Automatización de análisis espaciales complejos usando arcpy, geopandas y rasterio para procesamiento masivo.",
+    "proj.5.title": "Integración APIs &amp; ETL",
+    "proj.5.desc":  "Orquestación de fuentes de datos vía APIs REST, transformación ETL y carga en bases de datos espaciales.",
+    "edu.col.title":"Título / Certificación",
+    "edu.col.inst": "Institución",
+    "edu.col.year": "Año",
+    "edu.0.deg":    "Ciencias / Ingeniería",
+    "edu.0.type":   "Pregrado",
+    "edu.1.deg":    "SIG &amp; Teledetección",
+    "edu.cert":     "Certificación",
+    "edu.3.school": "Autodidacta / Proyectos reales",
+    "edu.practice": "Práctica",
+    "contact.email":"Escríbeme",
+    "contact.portfolio":"Portafolio",
+    "contact.repo": "Repositorio",
+    "info.line1":   "Portafolio · Cristian Camilo Castañeda R.",
+    "info.line2":   "Hecho con HTML5 + CSS3 — Sin frameworks",
+    "info.spec":    "Especialidades:",
+    "info.s1":      "Análisis Geoespacial",
+    "info.s2":      "Scripting &amp; Data Science",
+    "info.s3":      "Automatización de flujos",
+    "info.s4":      "Análisis impulsado por IA",
+    "info.s5":      "Visualización interactiva",
+    "info.inspired":"Diseño inspirado en Jupyter Notebooks",
+    "info.hosted":  "Listo para GitHub Pages",
+    "footer":       "Hecho con 💚 y puro HTML5 / CSS3"
+  },
+  en: {
+    "nav.about":    "About",
+    "nav.skills":   "Skills",
+    "nav.exp":      "Exp.",
+    "nav.projects": "Projects",
+    "nav.contact":  "Contact",
+    "cell0.comment":"# Portfolio — Cristian Camilo Castañeda R.",
+    "hero.tagline": "GIS Analyst · Data Scientist · AI &amp; Automation Enthusiast",
+    "badge.ai":     "🤖 AI-Driven Analysis",
+    "badge.auto":   "⚙️ n8n Automation",
+    "skill.data":   "Data Analysis",
+    "exp.0.role":   "GIS Analyst &amp; Data Scientist",
+    "exp.0.co":     "GIS Projects &amp; Consulting",
+    "exp.present":  "Present",
+    "exp.0.desc":   "Geospatial analysis with ArcGIS, workflow automation with Python and n8n, interactive dashboard development and AI-driven data analysis.",
+    "exp.1.role":   "Automation Specialist",
+    "exp.1.co":     "AI &amp; Workflow Projects",
+    "exp.1.desc":   "Design and implementation of automation pipelines with n8n, API integration and language models to optimize business processes.",
+    "exp.2.role":   "Data Analyst",
+    "exp.2.co":     "Consulting &amp; Industry",
+    "exp.2.desc":   "Processing and visualization of geospatial data, technical report generation and data-driven decision support.",
+    "proj.0.title": "ArcGIS Geospatial Analysis",
+    "proj.0.desc":  "Advanced territorial mapping and analysis with ArcGIS Pro, geoprocess automation and dynamic cartography generation.",
+    "proj.1.title": "n8n Automation",
+    "proj.1.desc":  "End-to-end pipelines integrating APIs, databases and external services to optimize business workflows.",
+    "proj.2.title": "AI-Driven Data Analysis",
+    "proj.2.desc":  "AI-powered analysis models to process large volumes of geospatial data and generate automated insights.",
+    "proj.3.title": "Interactive Dashboards",
+    "proj.3.desc":  "Real-time visualizations, territorial analysis and executive reports with multiple integrated data sources.",
+    "proj.4.title": "GIS Scripts with Python",
+    "proj.4.desc":  "Automation of complex spatial analyses using arcpy, geopandas and rasterio for massive data processing.",
+    "proj.5.title": "API &amp; ETL Integration",
+    "proj.5.desc":  "Orchestration of multiple data sources via REST APIs, ETL transformation and loading into spatial databases.",
+    "edu.col.title":"Title / Certification",
+    "edu.col.inst": "Institution",
+    "edu.col.year": "Year",
+    "edu.0.deg":    "Science / Engineering",
+    "edu.0.type":   "Undergraduate",
+    "edu.1.deg":    "GIS &amp; Remote Sensing",
+    "edu.cert":     "Certification",
+    "edu.3.school": "Self-taught / Real projects",
+    "edu.practice": "Practice",
+    "contact.email":"Write me",
+    "contact.portfolio":"Portfolio",
+    "contact.repo": "Repository",
+    "info.line1":   "Portfolio · Cristian Camilo Castañeda R.",
+    "info.line2":   "Built with HTML5 + CSS3 — No frameworks",
+    "info.spec":    "Specialties:",
+    "info.s1":      "Geospatial Analysis",
+    "info.s2":      "Scripting &amp; Data Science",
+    "info.s3":      "Workflow Automation",
+    "info.s4":      "AI-Driven Analysis",
+    "info.s5":      "Interactive Visualization",
+    "info.inspired":"Design inspired by Jupyter Notebooks",
+    "info.hosted":  "Ready for GitHub Pages",
+    "footer":       "Built with 💚 and pure HTML5 / CSS3"
+  },
+  fr: {
+    "nav.about":    "À propos",
+    "nav.skills":   "Compétences",
+    "nav.exp":      "Exp.",
+    "nav.projects": "Projets",
+    "nav.contact":  "Contact",
+    "cell0.comment":"# Portfolio — Cristian Camilo Castañeda R.",
+    "hero.tagline": "Analyste SIG · Data Scientist · Passionné d'IA &amp; Automatisation",
+    "badge.ai":     "🤖 Analyse par IA",
+    "badge.auto":   "⚙️ Automatisation n8n",
+    "skill.data":   "Analyse de données",
+    "exp.0.role":   "Analyste SIG &amp; Data Scientist",
+    "exp.0.co":     "Projets SIG &amp; Conseil",
+    "exp.present":  "Présent",
+    "exp.0.desc":   "Analyse géospatiale avec ArcGIS, automatisation des flux avec Python et n8n, développement de tableaux de bord et analyse de données par IA.",
+    "exp.1.role":   "Spécialiste en Automatisation",
+    "exp.1.co":     "Projets IA &amp; Flux de Travail",
+    "exp.1.desc":   "Conception et implémentation de pipelines d'automatisation avec n8n, intégration d'APIs et de modèles de langage pour optimiser les processus métier.",
+    "exp.2.role":   "Analyste de Données",
+    "exp.2.co":     "Conseil &amp; Industrie",
+    "exp.2.desc":   "Traitement et visualisation des données géospatiales, génération de rapports techniques et aide à la décision basée sur les données.",
+    "proj.0.title": "Analyse Géospatiale ArcGIS",
+    "proj.0.desc":  "Cartographie et analyse territoriale avancées avec ArcGIS Pro, automatisation des géoprocessus et génération de cartographie dynamique.",
+    "proj.1.title": "Automatisation avec n8n",
+    "proj.1.desc":  "Pipelines bout en bout intégrant APIs, bases de données et services externes pour optimiser les flux de travail.",
+    "proj.2.title": "Analyse de Données par IA",
+    "proj.2.desc":  "Modèles d'analyse propulsés par l'IA pour traiter de grands volumes de données géospatiales et générer des insights automatisés.",
+    "proj.3.title": "Tableaux de Bord Interactifs",
+    "proj.3.desc":  "Visualisations en temps réel, analyse territoriale et rapports exécutifs avec plusieurs sources de données intégrées.",
+    "proj.4.title": "Scripts SIG avec Python",
+    "proj.4.desc":  "Automatisation d'analyses spatiales complexes avec arcpy, geopandas et rasterio pour le traitement massif de données.",
+    "proj.5.title": "Intégration APIs &amp; ETL",
+    "proj.5.desc":  "Orchestration de sources de données via APIs REST, transformation ETL et chargement dans des bases de données spatiales.",
+    "edu.col.title":"Titre / Certification",
+    "edu.col.inst": "Établissement",
+    "edu.col.year": "Année",
+    "edu.0.deg":    "Sciences / Ingénierie",
+    "edu.0.type":   "Licence",
+    "edu.1.deg":    "SIG &amp; Télédétection",
+    "edu.cert":     "Certification",
+    "edu.3.school": "Autodidacte / Projets réels",
+    "edu.practice": "Pratique",
+    "contact.email":"Écrivez-moi",
+    "contact.portfolio":"Portfolio",
+    "contact.repo": "Dépôt",
+    "info.line1":   "Portfolio · Cristian Camilo Castañeda R.",
+    "info.line2":   "Créé avec HTML5 + CSS3 — Sans frameworks",
+    "info.spec":    "Spécialités :",
+    "info.s1":      "Analyse Géospatiale",
+    "info.s2":      "Scripting &amp; Data Science",
+    "info.s3":      "Automatisation des flux",
+    "info.s4":      "Analyse propulsée par l'IA",
+    "info.s5":      "Visualisation interactive",
+    "info.inspired":"Design inspiré des Jupyter Notebooks",
+    "info.hosted":  "Prêt pour GitHub Pages",
+    "footer":       "Créé avec 💚 et du pur HTML5 / CSS3"
+  }
+};
+
+// ══════════════════════════════════════════
+//  LANGUAGE SWITCHER
+// ══════════════════════════════════════════
+let currentLang = localStorage.getItem('lang') || 'es';
+
+function applyLang(lang) {
+  currentLang = lang;
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('data-lang', lang);
+  localStorage.setItem('lang', lang);
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (i18n[lang] && i18n[lang][key]) {
+      el.innerHTML = i18n[lang][key];
+    }
+  });
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+
+// ══════════════════════════════════════════
+//  THEME TOGGLE
+// ══════════════════════════════════════════
+let currentTheme = localStorage.getItem('theme') || 'dark';
+const themeBtn   = document.getElementById('themeToggle');
+
+function applyTheme(theme) {
+  currentTheme = theme;
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  themeBtn.title = theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+}
+
+themeBtn.addEventListener('click', () => {
+  applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+});
+
+// ── INIT ──
+applyTheme(currentTheme);
+applyLang(currentLang);
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+// ── LEAFLET MAP ──
+const LAT = 43.0896, LON = -79.0849;
+
+const map = L.map('map', {
+  center: [LAT, LON], zoom: 13,
+  zoomControl: true, scrollWheelZoom: false
+});
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19
+}).addTo(map);
+
+// Custom marker
+const markerIcon = L.divIcon({
+  className: '',
+  html: `<div style="
+    width:40px;height:40px;border-radius:50% 50% 50% 0;
+    background:linear-gradient(135deg,#00d4aa,#7c6af7);
+    border:3px solid #fff;
+    box-shadow:0 4px 20px rgba(0,212,170,.6);
+    transform:rotate(-45deg);
+    display:flex;align-items:center;justify-content:center;">
+    <span style="transform:rotate(45deg);font-size:16px;">📍</span>
+  </div>`,
+  iconSize: [40,40], iconAnchor: [20,40], popupAnchor: [0,-44]
+});
+
+L.marker([LAT, LON], { icon: markerIcon }).addTo(map)
+  .bindPopup(`
+    <div class="popup-title">Niagara Falls</div>
+    <div class="popup-sub">Ontario, Canada</div>
+    <div class="popup-coord">43.0896° N &nbsp;|&nbsp; 79.0849° W</div>
+  `).openPopup();
+
+// Sync map when theme changes
+new MutationObserver(() => setTimeout(() => map.invalidateSize(), 50))
+  .observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+</script>
+</body>
+</html>
