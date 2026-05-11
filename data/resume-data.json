@@ -1,0 +1,578 @@
+{
+  "meta": {
+    "version": "1.0",
+    "defaultLanguage": "en",
+    "languages": ["es", "en", "fr"],
+    "lastUpdated": "2026-05-11"
+  },
+
+  "person": {
+    "name": "Cristian Camilo Castañeda Rodriguez",
+    "initials": "CC",
+    "title": {
+      "es": "Analista GIS & Desarrollador Geoespacial",
+      "en": "GIS Analyst & Geospatial Developer",
+      "fr": "Analyste SIG & Développeur Géospatial"
+    },
+    "location": "Niagara Falls, ON, Canada",
+    "available": true
+  },
+
+  "contact": {
+    "email": "ccamilocr@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ccamilocr",
+    "github": "https://github.com/ccamilocr"
+  },
+
+  "summary": {
+    "en": "GIS Analyst and Geospatial Developer with 10+ years of experience delivering end-to-end geospatial data and analytics services for international organizations including FAO, UNDP, and UNODC. Proven track record in data governance, spatial database stewardship (PostgreSQL/PostGIS, Oracle, SQL Server), and the design of cartographic products and dashboards that directly inform operational decisions. Experienced in applying data standards and data models (LADM-COL), automating ETL workflows, and developing departmental business applications from web GIS platforms to field data collection systems. Brings strong analytical skills, stakeholder collaboration experience across multidisciplinary teams, and a record of leading projects from requirements gathering through deployment and training.",
+    "es": "Analista SIG y Desarrollador Geoespacial con más de 10 años de experiencia en la prestación de servicios integrales de datos geoespaciales y analítica para organizaciones internacionales como FAO, PNUD y UNODC. Trayectoria comprobada en gobernanza de datos, administración de bases de datos espaciales (PostgreSQL/PostGIS, Oracle, SQL Server) y diseño de productos cartográficos y dashboards que informan directamente las decisiones operacionales. Con experiencia en la aplicación de estándares y modelos de datos (LADM-COL), automatización de flujos ETL y desarrollo de aplicaciones desde plataformas web GIS hasta sistemas de recolección de datos en campo. Sólidas habilidades analíticas, colaboración con equipos multidisciplinarios y liderazgo de proyectos desde el levantamiento de requerimientos hasta el despliegue y la capacitación.",
+    "fr": "Analyste SIG et développeur géospatial avec plus de 10 ans d'expérience dans la fourniture de services géospatiaux complets et d'analyses pour des organisations internationales telles que la FAO, le PNUD et l'ONUDC. Bilan éprouvé en gouvernance des données, gestion de bases de données spatiales (PostgreSQL/PostGIS, Oracle, SQL Server) et conception de produits cartographiques et de tableaux de bord informant directement les décisions opérationnelles. Expérience dans l'application de normes et modèles de données (LADM-COL), l'automatisation des flux ETL et le développement d'applications depuis les plateformes Web SIG jusqu'aux systèmes de collecte de données terrain. Solides compétences analytiques, collaboration avec des équipes multidisciplinaires et gestion de projets de la définition des besoins jusqu'au déploiement et à la formation."
+  },
+
+  "skills": {
+    "gis": {
+      "label": { "es": "SIG & Análisis Espacial", "en": "GIS & Spatial Analysis", "fr": "SIG & Analyse Spatiale" },
+      "items": ["ArcGIS Pro", "ArcGIS Enterprise", "ArcGIS Online", "Portal for ArcGIS", "QGIS", "Geoprocessing", "Georeferencing", "Cartographic Production", "Spatial QA/QC"]
+    },
+    "databases": {
+      "label": { "es": "Bases de Datos Espaciales", "en": "Spatial Databases", "fr": "Bases de Données Spatiales" },
+      "items": ["PostgreSQL/PostGIS", "Oracle Spatial", "SQL Server", "Queries", "Triggers", "Stored Procedures", "Data Stewardship"]
+    },
+    "standards": {
+      "label": { "es": "Estándares & Modelos de Datos", "en": "Data Standards & Models", "fr": "Normes & Modèles de Données" },
+      "items": ["LADM-COL", "Open Data Standards", "Data Governance Frameworks", "Metadata Management", "Data Integrity Compliance"]
+    },
+    "etl": {
+      "label": { "es": "ETL & Automatización", "en": "ETL & Automation", "fr": "ETL & Automatisation" },
+      "items": ["Python", "FME", "Pentaho", "n8n", "AI-assisted Workflow Automation", "Data Validation Pipelines"]
+    },
+    "webgis": {
+      "label": { "es": "Web GIS & Desarrollo", "en": "Web GIS & Development", "fr": "Web SIG & Développement" },
+      "items": ["ArcGIS Online", "Leaflet.js", "JavaScript", "HTML5/CSS3", "PHP", "Laravel", "Interactive Web Maps", "Dashboards"]
+    },
+    "bi": {
+      "label": { "es": "BI & Visualización", "en": "BI & Visualization", "fr": "BI & Visualisation" },
+      "items": ["Power BI", "Tableau", "ArcGIS Dashboards", "Data Stories", "Thematic Maps", "Executive Reports"]
+    },
+    "fielddata": {
+      "label": { "es": "Recolección de Datos en Campo", "en": "Field Data Collection", "fr": "Collecte de Données Terrain" },
+      "items": ["KoboToolbox", "Survey123", "ODK", "ArcGIS Field Maps", "Online/Offline Form Deployment & Sync"]
+    },
+    "cloud": {
+      "label": { "es": "Nube & Administración de Servidores", "en": "Cloud & Server Admin", "fr": "Cloud & Admin Serveurs" },
+      "items": ["AWS", "Google Cloud", "Azure", "Apache", "Nginx", "IIS", "Tomcat", "Linux Ubuntu"]
+    },
+    "remotesensing": {
+      "label": { "es": "Teledetección", "en": "Remote Sensing", "fr": "Télédétection" },
+      "items": ["Satellite Imagery Interpretation", "Aerial Imagery Analysis", "Burn Scar Analysis", "PCI Geomatics", "ERDAS Imagine"]
+    },
+    "cadbim": {
+      "label": { "es": "Integración CAD/BIM", "en": "CAD/BIM Integration", "fr": "Intégration CAD/BIM" },
+      "items": ["Civil 3D", "AutoCAD", "DWG", "RVT", "IFC", "Schema Alignment", "Layer Validation"]
+    }
+  },
+
+  "experience": [
+    {
+      "company": "FAO",
+      "companyFull": "Food and Agriculture Organization of the United Nations",
+      "role": {
+        "es": "Especialista en Tecnología, Bases de Datos y Líder Catastral",
+        "en": "Technology and Database Specialist and Cadastral Leader",
+        "fr": "Spécialiste en Technologie, Bases de Données et Leader Cadastral"
+      },
+      "period": "Sep 2024 – Presente",
+      "location": "Bogotá, Colombia",
+      "current": true,
+      "links": [
+        { "label": "KoboToolbox Platform", "url": "https://kf.kobotoolbox.fao.org.co/" },
+        { "label": "AI Agent FAO", "url": "https://aiagent.fao.org.co/" },
+        { "label": "AI Chat FAO", "url": "https://aichat.fao.org.co/" }
+      ],
+      "achievements": {
+        "es": [
+          "Establecí e implementé metodologías y herramientas de administración SIG para adquisición de datos, coordinación con el IGAC, control de calidad y actualización del sistema.",
+          "Desarrollé e implementé soluciones tecnológicas avanzadas para recolección de datos en campo usando KoboToolbox y ODK.",
+          "Desarrollé flujos de procesamiento ETL usando Pentaho para integración y estandarización de datos.",
+          "Construí agentes de IA para automatización de tareas, bots en aplicaciones web y WhatsApp, y análisis de hojas de vida.",
+          "Gestioné y mantuve modelos de datos LADM-COL y XTF garantizando consistencia y cumplimiento con estándares del proyecto.",
+          "Optimicé configuraciones de base de datos PostgreSQL/PostGIS para datos espaciales y alfanuméricos.",
+          "Diseñé y generé dashboards y mapas temáticos para entregables y requerimientos de stakeholders."
+        ],
+        "en": [
+          "Established and implemented GIS administration methodologies and tools for data acquisition, coordination with IGAC, quality control, and system updates.",
+          "Developed and deployed advanced technological solutions for field data collection using KoboToolbox and ODK.",
+          "Developed ETL data processing workflows using Pentaho for data integration and standardization.",
+          "Built AI agents to automate tasks, using bots in web applications and WhatsApp, and analyzing CVs.",
+          "Managed and maintained LADM-COL and XTF data models to ensure data consistency and compliance with project standards.",
+          "Optimized PostgreSQL/PostGIS database configurations for spatial and alphanumeric data.",
+          "Designed and generated dashboards and thematic maps to meet project deliverables and stakeholder requirements."
+        ],
+        "fr": [
+          "Établi et mis en œuvre des méthodologies et outils d'administration SIG pour l'acquisition de données, la coordination avec l'IGAC, le contrôle de qualité et les mises à jour du système.",
+          "Développé et déployé des solutions technologiques avancées pour la collecte de données terrain avec KoboToolbox et ODK.",
+          "Développé des flux de traitement ETL avec Pentaho pour l'intégration et la standardisation des données.",
+          "Créé des agents IA pour automatiser des tâches, utiliser des bots dans des applications web et WhatsApp, et analyser des CV.",
+          "Géré et maintenu les modèles de données LADM-COL et XTF pour assurer la cohérence et la conformité aux normes du projet.",
+          "Optimisé les configurations de base de données PostgreSQL/PostGIS pour les données spatiales et alphanumériques.",
+          "Conçu et généré des tableaux de bord et des cartes thématiques pour répondre aux livrables et aux exigences des parties prenantes."
+        ]
+      }
+    },
+    {
+      "company": "PNUD Colombia",
+      "companyFull": "Programa de las Naciones Unidas para el Desarrollo",
+      "role": {
+        "es": "Analista de Monitoreo, Evaluación y SIG",
+        "en": "Monitoring, Evaluation, and GIS Analyst",
+        "fr": "Analyste en Suivi, Évaluation et SIG"
+      },
+      "period": "Jun 2023 – Ago 2024",
+      "location": "Bogotá, Colombia",
+      "current": false,
+      "links": [
+        { "label": "ArcGIS Experience", "url": "https://experience.arcgis.com/experience/fb52274236294685b0f3b39bf842483d/page/Portada/" },
+        { "label": "Burn Scar Algorithm", "url": "https://github.com/ccamilocr/AlgoritmoMinAmbiente/tree/main" }
+      ],
+      "achievements": {
+        "es": [
+          "Desarrollé dashboards para gestión de indicadores estratégicos del proyecto.",
+          "Creé visores de información geográfica para análisis de datos espaciales.",
+          "Limpié y procesé bases de datos de múltiples fuentes para análisis de datos.",
+          "Desarrollé el algoritmo de Monitoreo de Cicatrices de Quema mediante Imágenes Satelitales para evaluar niveles de severidad de incendios."
+        ],
+        "en": [
+          "Developed dashboards for strategic indicator management.",
+          "Created geographic information viewers for spatial data analysis.",
+          "Cleansed and processed databases from multiple sources for data analysis.",
+          "Developed the Burn Scar Monitoring via Satellite Imagery algorithm to assess burn severity levels."
+        ],
+        "fr": [
+          "Développé des tableaux de bord pour la gestion des indicateurs stratégiques.",
+          "Créé des visionneuses d'information géographique pour l'analyse des données spatiales.",
+          "Nettoyé et traité des bases de données de sources multiples pour l'analyse des données.",
+          "Développé l'algorithme de surveillance des cicatrices de brûlis par imagerie satellitaire pour évaluer les niveaux de gravité des incendies."
+        ]
+      }
+    },
+    {
+      "company": "FAO",
+      "companyFull": "Food and Agriculture Organization of the United Nations",
+      "role": {
+        "es": "Especialista en Tecnología y Bases de Datos",
+        "en": "Technology and Database Specialist",
+        "fr": "Spécialiste en Technologie et Bases de Données"
+      },
+      "period": "May 2020 – Feb 2023",
+      "location": "Bogotá, Colombia",
+      "current": false,
+      "links": [],
+      "achievements": {
+        "es": [
+          "Desarrollé una plataforma tecnológica nacional para apoyar operaciones de Barrido Catastral Masivo, habilitando captura offline y su integración con el modelo LADM-COL.",
+          "Generé reportes de control de calidad con Power BI y desarrollé dashboards web para monitoreo del proyecto.",
+          "Diseñé, administré y mantuve la base de datos del proyecto en PostgreSQL/PostGIS.",
+          "Creé formularios inteligentes para recolección de datos con KoboToolbox, Aggregate y ODK.",
+          "Desarrollé herramientas ETL para unificación de bases de datos según requerimientos de la ANT.",
+          "Administré servidores Linux Ubuntu que alojan aplicaciones y servicios del proyecto."
+        ],
+        "en": [
+          "Developed a nationwide technological platform to support Mass Cadastral Survey operations, enabling offline field data capture and integration with the LADM-COL data model.",
+          "Generated quality control reports using Power BI and developed web-based dashboards for project monitoring.",
+          "Designed, administered, and maintained the project database in PostgreSQL and PostGIS.",
+          "Created intelligent forms for data collection using KoboToolbox, Aggregate, and ODK.",
+          "Developed ETL tools for the unification of databases according to ANT requirements.",
+          "Administered Linux Ubuntu servers hosting project applications and services."
+        ],
+        "fr": [
+          "Développé une plateforme technologique nationale pour soutenir les opérations de levé cadastral massif, permettant la capture de données terrain hors ligne et l'intégration avec le modèle LADM-COL.",
+          "Généré des rapports de contrôle qualité avec Power BI et développé des tableaux de bord web pour le suivi du projet.",
+          "Conçu, administré et maintenu la base de données du projet en PostgreSQL et PostGIS.",
+          "Créé des formulaires intelligents pour la collecte de données avec KoboToolbox, Aggregate et ODK.",
+          "Développé des outils ETL pour l'unification des bases de données selon les exigences de l'ANT.",
+          "Administré des serveurs Linux Ubuntu hébergeant les applications et services du projet."
+        ]
+      }
+    },
+    {
+      "company": "Instituto Distrital de Patrimonio Cultural",
+      "companyFull": "Instituto Distrital de Patrimonio Cultural – Bogotá",
+      "role": {
+        "es": "Desarrollador Full-Stack",
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack"
+      },
+      "period": "Sep 2020 – Dic 2022",
+      "location": "Bogotá, Colombia",
+      "current": false,
+      "links": [],
+      "achievements": {
+        "es": [
+          "Diseñé, gestioné y optimicé la base de datos SISBIC garantizando arquitectura de datos robusta.",
+          "Desarrollé y mejoré continuamente la plataforma web SISBIC con actualizaciones de frontend.",
+          "Mantuve y optimicé integraciones backend entre la base de datos e interfaces web.",
+          "Creé un visor geográfico interactivo para visualizar datos SISBIC usando tecnología ArcGIS."
+        ],
+        "en": [
+          "Designed, managed, and optimized the SISBIC database ensuring robust data architecture and integrity.",
+          "Developed and continuously improved the SISBIC web platform, implementing frontend updates to improve user experience.",
+          "Maintained and streamlined backend integrations between the database and web interfaces.",
+          "Created an interactive geographic viewer to visualize SISBIC data using ArcGIS technology."
+        ],
+        "fr": [
+          "Conçu, géré et optimisé la base de données SISBIC en assurant une architecture de données robuste.",
+          "Développé et amélioré continuellement la plateforme web SISBIC avec des mises à jour frontend.",
+          "Maintenu et optimisé les intégrations backend entre la base de données et les interfaces web.",
+          "Créé un visualiseur géographique interactif pour visualiser les données SISBIC avec la technologie ArcGIS."
+        ]
+      }
+    },
+    {
+      "company": "IGAC",
+      "companyFull": "Instituto Geográfico Agustín Codazzi",
+      "role": {
+        "es": "Líder de Equipo Geográfico",
+        "en": "Geographic Team Leader",
+        "fr": "Chef d'Équipe Géographique"
+      },
+      "period": "Abr 2019 – May 2020",
+      "location": "Bogotá, Colombia",
+      "current": false,
+      "links": [],
+      "achievements": {
+        "es": [
+          "Desarrollé, mantuve y brindé soporte al Sistema Nacional Catastral (SNC), entregando infraestructura geoespacial a sus bases de datos.",
+          "Administré geoservicios del SNC y gestioné bases de datos geoespaciales en Oracle y PostgreSQL."
+        ],
+        "en": [
+          "Developed, maintained, and provided support for the National Cadastral System (SNC), delivering geospatial infrastructure to its databases.",
+          "Administered SNC geoservices and managed geospatial databases in Oracle and PostgreSQL."
+        ],
+        "fr": [
+          "Développé, maintenu et fourni un support pour le Système National Cadastral (SNC), livrant l'infrastructure géospatiale à ses bases de données.",
+          "Administré les géoservices du SNC et géré les bases de données géospatiales en Oracle et PostgreSQL."
+        ]
+      }
+    },
+    {
+      "company": "UNODC",
+      "companyFull": "United Nations Office on Drugs and Crime",
+      "role": {
+        "es": "Analista y Desarrollador de Tecnología de Información Geoespacial",
+        "en": "Geospatial Information Technology Analyst & Developer",
+        "fr": "Analyste et Développeur en Technologies de l'Information Géospatiale"
+      },
+      "period": "Oct 2012 – Mar 2019",
+      "location": "Colombia",
+      "current": false,
+      "links": [
+        { "label": "UNODC Danet", "url": "https://danet.unodc.org.co/" },
+        { "label": "GIZ Geospatial Cooperation", "url": "https://danet.unodc.org.co/Cooperacion_GIZ_visorgeo" }
+      ],
+      "achievements": {
+        "es": [
+          "Conceptualicé, desarrollé e implementé soluciones de información dinámica en internet para apoyar la toma de decisiones y el análisis operacional de campo.",
+          "Construí bases de datos y consultas SQL; diseñé aplicaciones móviles, de escritorio y web.",
+          "Desarrollé soluciones cartográficas web e interpreté imágenes aéreas y satelitales.",
+          "Establecí y mejoré métodos de administración SIG y proporcioné servicios técnicos en geomática.",
+          "Desarrollé el sitio web UNODC Danet y el proyecto de cooperación geoespacial GIZ."
+        ],
+        "en": [
+          "Conceptualized, developed, and implemented dynamic information solutions on the internet to support decision-making and operational field analysis.",
+          "Built databases and SQL queries; designed mobile, desktop, and web applications.",
+          "Developed web-based mapping solutions and interpreted aerial and satellite imagery.",
+          "Established and improved GIS administration methods and provided technical geomatics services.",
+          "Developed the UNODC Danet website and the GIZ Geospatial Cooperation project."
+        ],
+        "fr": [
+          "Conceptualisé, développé et mis en œuvre des solutions d'information dynamiques sur Internet pour soutenir la prise de décision et l'analyse opérationnelle de terrain.",
+          "Construit des bases de données et des requêtes SQL; conçu des applications mobiles, de bureau et web.",
+          "Développé des solutions cartographiques web et interprété des images aériennes et satellitaires.",
+          "Établi et amélioré les méthodes d'administration SIG et fourni des services techniques en géomatique.",
+          "Développé le site web UNODC Danet et le projet de coopération géospatiale GIZ."
+        ]
+      }
+    }
+  ],
+
+  "education": [
+    {
+      "institution": "Universidad Distrital Francisco José de Caldas",
+      "degree": {
+        "es": "Diploma Universitario Profesional en Sistemas de Información Geográfica",
+        "en": "Professional University Diploma in Geographic Information Systems",
+        "fr": "Diplôme Universitaire Professionnel en Systèmes d'Information Géographique"
+      },
+      "field": "Geographic Information Systems",
+      "period": "Ene 2010 – Dic 2010",
+      "location": "Bogotá, Colombia",
+      "type": "postgraduate"
+    },
+    {
+      "institution": "Universidad Distrital Francisco José de Caldas",
+      "degree": {
+        "es": "Ingeniería Catastral y Geodésica",
+        "en": "University Degree in Cadastral and Geodetic Engineering",
+        "fr": "Licence en Ingénierie Cadastrale et Géodésique"
+      },
+      "field": "Cadastral and Geodetic Engineering",
+      "period": "Jun 2002 – Dic 2009",
+      "location": "Bogotá, Colombia",
+      "type": "undergraduate"
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "AI Agent & Chat – FAO",
+      "description": {
+        "es": "Agentes de inteligencia artificial para automatización de tareas, análisis de hojas de vida y atención mediante bots en aplicaciones web y WhatsApp, desplegados para la FAO Colombia.",
+        "en": "Artificial intelligence agents for task automation, CV analysis, and bot-based support in web applications and WhatsApp, deployed for FAO Colombia.",
+        "fr": "Agents d'intelligence artificielle pour l'automatisation des tâches, l'analyse de CV et le support par bots dans les applications web et WhatsApp, déployés pour la FAO Colombie."
+      },
+      "role": {
+        "es": "Desarrollador Principal",
+        "en": "Lead Developer",
+        "fr": "Développeur Principal"
+      },
+      "period": "2024 – Presente",
+      "technologies": ["AI Agents", "WhatsApp API", "n8n", "Python", "REST APIs"],
+      "links": [
+        { "label": "AI Agent", "url": "https://aiagent.fao.org.co/" },
+        { "label": "AI Chat", "url": "https://aichat.fao.org.co/" }
+      ],
+      "highlights": {
+        "es": ["Automatización de tareas repetitivas con agentes de IA", "Bot de WhatsApp para soporte en campo", "Sistema de análisis automático de CVs"],
+        "en": ["Task automation with AI agents", "WhatsApp bot for field support", "Automatic CV analysis system"],
+        "fr": ["Automatisation des tâches avec des agents IA", "Bot WhatsApp pour le support terrain", "Système d'analyse automatique de CV"]
+      }
+    },
+    {
+      "name": "KoboToolbox FAO – Plataforma de Recolección",
+      "description": {
+        "es": "Plataforma de captura de datos de campo para operaciones de barrido catastral masivo, con soporte offline e integración al modelo LADM-COL.",
+        "en": "Field data collection platform for mass cadastral survey operations with offline support and integration with the LADM-COL data model.",
+        "fr": "Plateforme de collecte de données terrain pour les opérations de levé cadastral massif avec support hors ligne et intégration au modèle LADM-COL."
+      },
+      "role": {
+        "es": "Arquitecto y Desarrollador",
+        "en": "Architect and Developer",
+        "fr": "Architecte et Développeur"
+      },
+      "period": "2020 – 2023",
+      "technologies": ["KoboToolbox", "ODK", "PostgreSQL", "PostGIS", "LADM-COL", "Pentaho"],
+      "links": [
+        { "label": "KoboToolbox FAO", "url": "https://kf.kobotoolbox.fao.org.co/" }
+      ],
+      "highlights": {
+        "es": ["Plataforma nacional de captura offline para catastro", "Integración con modelo LADM-COL", "ETL con Pentaho para estandarización de datos"],
+        "en": ["National offline capture platform for cadastre", "Integration with LADM-COL model", "Pentaho ETL for data standardization"],
+        "fr": ["Plateforme nationale de capture hors ligne pour le cadastre", "Intégration avec le modèle LADM-COL", "ETL Pentaho pour la standardisation des données"]
+      }
+    },
+    {
+      "name": "Algoritmo Cicatrices de Quema – MinAmbiente",
+      "description": {
+        "es": "Algoritmo de monitoreo de cicatrices de quema mediante imágenes satelitales para evaluar niveles de severidad de incendios forestales en Colombia.",
+        "en": "Burn Scar Monitoring algorithm via satellite imagery to assess burn severity levels of forest fires in Colombia.",
+        "fr": "Algorithme de surveillance des cicatrices de brûlis par imagerie satellitaire pour évaluer les niveaux de sévérité des incendies de forêt en Colombie."
+      },
+      "role": {
+        "es": "Desarrollador",
+        "en": "Developer",
+        "fr": "Développeur"
+      },
+      "period": "2023 – 2024",
+      "technologies": ["Python", "Remote Sensing", "Satellite Imagery", "ArcGIS", "GitHub"],
+      "links": [
+        { "label": "GitHub Repository", "url": "https://github.com/ccamilocr/AlgoritmoMinAmbiente/tree/main" },
+        { "label": "ArcGIS Viewer", "url": "https://experience.arcgis.com/experience/fb52274236294685b0f3b39bf842483d/page/Portada/" }
+      ],
+      "highlights": {
+        "es": ["Detección automática de áreas quemadas via satélite", "Clasificación de severidad de incendios", "Visor cartográfico interactivo"],
+        "en": ["Automatic detection of burned areas via satellite", "Fire severity classification", "Interactive cartographic viewer"],
+        "fr": ["Détection automatique des zones brûlées par satellite", "Classification de la sévérité des incendies", "Visionneuse cartographique interactive"]
+      }
+    },
+    {
+      "name": "SISBIC – Sistema de Patrimonio Cultural",
+      "description": {
+        "es": "Base de datos y plataforma web para gestión del patrimonio cultural del Instituto Distrital de Patrimonio Cultural de Bogotá, con visor geográfico interactivo en ArcGIS.",
+        "en": "Database and web platform for cultural heritage management at the Bogotá District Cultural Heritage Institute, with an interactive geographic viewer in ArcGIS.",
+        "fr": "Base de données et plateforme web pour la gestion du patrimoine culturel de l'Institut Distrital du Patrimoine Culturel de Bogotá, avec un visualiseur géographique interactif en ArcGIS."
+      },
+      "role": {
+        "es": "Desarrollador Full-Stack",
+        "en": "Full-Stack Developer",
+        "fr": "Développeur Full-Stack"
+      },
+      "period": "2020 – 2022",
+      "technologies": ["ArcGIS", "PostgreSQL", "JavaScript", "Full-Stack", "Web Mapping"],
+      "links": [],
+      "highlights": {
+        "es": ["Base de datos robusta para patrimonio cultural", "Visor geográfico interactivo con ArcGIS", "Plataforma web full-stack integrada"],
+        "en": ["Robust database for cultural heritage", "Interactive geographic viewer with ArcGIS", "Integrated full-stack web platform"],
+        "fr": ["Base de données robuste pour le patrimoine culturel", "Visualiseur géographique interactif avec ArcGIS", "Plateforme web full-stack intégrée"]
+      }
+    },
+    {
+      "name": "UNODC Danet – Portal Geoespacial",
+      "description": {
+        "es": "Portal web y herramientas geoespaciales para el análisis de información y toma de decisiones en el marco del proyecto COL/K53 de la UNODC en Colombia.",
+        "en": "Web portal and geospatial tools for information analysis and decision-making under UNODC's COL/K53 project in Colombia.",
+        "fr": "Portail web et outils géospatiaux pour l'analyse de l'information et la prise de décision dans le cadre du projet COL/K53 de l'ONUDC en Colombie."
+      },
+      "role": {
+        "es": "Analista y Desarrollador",
+        "en": "Analyst and Developer",
+        "fr": "Analyste et Développeur"
+      },
+      "period": "2012 – 2019",
+      "technologies": ["Web Development", "GIS", "JavaScript", "Databases", "Mapping"],
+      "links": [
+        { "label": "UNODC Danet", "url": "https://danet.unodc.org.co/" }
+      ],
+      "highlights": {
+        "es": ["Portal web desarrollado íntegramente", "Soluciones de mapeo web para análisis de campo", "Informes GIZ de cooperación geoespacial"],
+        "en": ["Fully developed web portal", "Web mapping solutions for field analysis", "GIZ geospatial cooperation reports"],
+        "fr": ["Portail web entièrement développé", "Solutions de cartographie web pour l'analyse de terrain", "Rapports de coopération géospatiale GIZ"]
+      }
+    }
+  ],
+
+  "i18n": {
+    "es": {
+      "chatTitle": "Portafolio Interactivo",
+      "available": "Disponible para oportunidades",
+      "inputHint": "Pregunta sobre habilidades, experiencia, proyectos, educación...",
+      "inputPlaceholder": "Escribe tu mensaje...",
+      "welcomeGreeting": "Hola, soy Cristian",
+      "welcomeSubtitle": "Haz clic en una opción o escribe tu pregunta:",
+      "botAvatar": "CC",
+      "userAvatar": "Tú",
+      "typingText": "Escribiendo...",
+      "downloadPDF": "Descargar CV",
+      "quickActions": {
+        "skills": "Habilidades",
+        "experience": "Experiencia",
+        "projects": "Proyectos",
+        "education": "Educación",
+        "contact": "Contacto",
+        "summary": "Resumen",
+        "funfact": "Dato curioso",
+        "help": "Ayuda"
+      },
+      "responses": {
+        "skillsIntro": "Estas son mis habilidades técnicas organizadas por categoría:",
+        "experienceIntro": "Mi trayectoria profesional:",
+        "projectsIntro": "Proyectos en los que he trabajado:",
+        "educationIntro": "Mi formación académica:",
+        "contactIntro": "¡Conectemos! Así puedes contactarme:",
+        "hireIntro": "Estoy disponible para oportunidades interesantes. Tengo más de 15 años de experiencia en SIG, bases de datos geoespaciales y desarrollo full-stack.",
+        "funFacts": [
+          "He trabajado para organismos de la ONU como FAO, UNODC y PNUD.",
+          "Soy piloto de drones certificado.",
+          "Desarrollé un algoritmo de detección de incendios con imágenes satelitales.",
+          "He construido agentes de IA para automatizar análisis de hojas de vida.",
+          "Mi trabajo ha tenido impacto en el catastro de todo Colombia.",
+          "Me apasiona combinar SIG con tecnologías modernas de IA."
+        ],
+        "helpText": "Puedes preguntar sobre mis <strong>habilidades</strong>, <strong>experiencia</strong>, <strong>proyectos</strong>, <strong>educación</strong> o <strong>contacto</strong>.",
+        "unknownText": "No estoy seguro de entender tu pregunta. ¿Quieres explorar algo en particular?",
+        "viewProject": "Ver proyecto →",
+        "currentJob": "Actual",
+        "present": "Presente"
+      },
+      "langLabel": "ES"
+    },
+    "en": {
+      "chatTitle": "Interactive Portfolio",
+      "available": "Available for opportunities",
+      "inputHint": "Ask about skills, experience, projects, education...",
+      "inputPlaceholder": "Type your message...",
+      "welcomeGreeting": "Hi, I'm Cristian",
+      "welcomeSubtitle": "Click an option or type your question:",
+      "botAvatar": "CC",
+      "userAvatar": "You",
+      "typingText": "Typing...",
+      "downloadPDF": "Download CV",
+      "quickActions": {
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "education": "Education",
+        "contact": "Contact",
+        "summary": "Summary",
+        "funfact": "Fun fact",
+        "help": "Help"
+      },
+      "responses": {
+        "skillsIntro": "Here are my technical skills organized by category:",
+        "experienceIntro": "My professional journey:",
+        "projectsIntro": "Projects I have worked on:",
+        "educationIntro": "My academic background:",
+        "contactIntro": "Let's connect! Here's how to reach me:",
+        "hireIntro": "I'm open to interesting opportunities. I have over 15 years of experience in GIS, geospatial databases, and full-stack development.",
+        "funFacts": [
+          "I have worked for UN agencies such as FAO, UNODC, and UNDP.",
+          "I am a certified drone pilot.",
+          "I developed a fire detection algorithm using satellite imagery.",
+          "I've built AI agents to automate CV analysis.",
+          "My work has had national impact on Colombia's cadastral system.",
+          "I love combining GIS with modern AI technologies."
+        ],
+        "helpText": "You can ask about my <strong>skills</strong>, <strong>experience</strong>, <strong>projects</strong>, <strong>education</strong>, or <strong>contact</strong> info.",
+        "unknownText": "I'm not sure I understand your question. Would you like to explore something specific?",
+        "viewProject": "View project →",
+        "currentJob": "Current",
+        "present": "Present"
+      },
+      "langLabel": "EN"
+    },
+    "fr": {
+      "chatTitle": "Portfolio Interactif",
+      "available": "Disponible pour des opportunités",
+      "inputHint": "Posez des questions sur les compétences, l'expérience, les projets...",
+      "inputPlaceholder": "Écrivez votre message...",
+      "welcomeGreeting": "Bonjour, je suis Cristian",
+      "welcomeSubtitle": "Cliquez sur une option ou tapez votre question :",
+      "botAvatar": "CC",
+      "userAvatar": "Vous",
+      "typingText": "En train d'écrire...",
+      "downloadPDF": "Télécharger CV",
+      "quickActions": {
+        "skills": "Compétences",
+        "experience": "Expérience",
+        "projects": "Projets",
+        "education": "Formation",
+        "contact": "Contact",
+        "summary": "Résumé",
+        "funfact": "Anecdote",
+        "help": "Aide"
+      },
+      "responses": {
+        "skillsIntro": "Voici mes compétences techniques organisées par catégorie :",
+        "experienceIntro": "Mon parcours professionnel :",
+        "projectsIntro": "Projets sur lesquels j'ai travaillé :",
+        "educationIntro": "Ma formation académique :",
+        "contactIntro": "Connectons-nous ! Voici comment me contacter :",
+        "hireIntro": "Je suis ouvert à des opportunités intéressantes. J'ai plus de 15 ans d'expérience en SIG, bases de données géospatiales et développement full-stack.",
+        "funFacts": [
+          "J'ai travaillé pour des agences de l'ONU telles que la FAO, l'ONUDC et le PNUD.",
+          "Je suis pilote de drone certifié.",
+          "J'ai développé un algorithme de détection des incendies par imagerie satellitaire.",
+          "J'ai créé des agents IA pour automatiser l'analyse de CV.",
+          "Mon travail a eu un impact national sur le système cadastral de la Colombie.",
+          "J'aime combiner le SIG avec les technologies modernes de l'IA."
+        ],
+        "helpText": "Vous pouvez poser des questions sur mes <strong>compétences</strong>, mon <strong>expérience</strong>, mes <strong>projets</strong>, ma <strong>formation</strong> ou mes coordonnées de <strong>contact</strong>.",
+        "unknownText": "Je ne suis pas sûr de comprendre votre question. Souhaitez-vous explorer quelque chose en particulier ?",
+        "viewProject": "Voir le projet →",
+        "currentJob": "Actuel",
+        "present": "Présent"
+      },
+      "langLabel": "FR"
+    }
+  }
+}
