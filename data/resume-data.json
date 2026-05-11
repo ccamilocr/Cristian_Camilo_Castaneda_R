@@ -78,45 +78,68 @@
       "company": "FAO",
       "companyFull": "Food and Agriculture Organization of the United Nations",
       "role": {
-        "es": "Especialista en Tecnología, Bases de Datos y Líder Catastral",
-        "en": "Technology and Database Specialist and Cadastral Leader",
-        "fr": "Spécialiste en Technologie, Bases de Données et Leader Cadastral"
+        "es": "Líder Catastral y Especialista en Bases de Datos",
+        "en": "Cadastral Leader and Database Specialist",
+        "fr": "Leader Cadastral et Spécialiste en Bases de Données"
       },
-      "period": "Sep 2024 – Presente",
+      "period": "Sep 2024 – Jan 2026",
       "location": "Bogotá, Colombia",
-      "current": true,
+      "current": false,
+      "description": {
+        "en": "The Food and Agriculture Organization of the United Nations (FAO) Land Tenure area in Colombia supports secure and equitable access to land, especially in rural and post-conflict contexts. It works with government institutions to strengthen land administration systems, promote formalization of property rights, and improve land governance. The program integrates geospatial technologies, data analysis, and community participation to enhance transparency, reduce conflicts, and support sustainable rural development aligned with national policies.",
+        "es": "El área de Tenencia de la Tierra de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO) en Colombia apoya el acceso seguro y equitativo a la tierra, especialmente en contextos rurales y de posconflicto. Trabaja con instituciones gubernamentales para fortalecer los sistemas de administración de tierras, promover la formalización de derechos de propiedad y mejorar la gobernanza de la tierra. El programa integra tecnologías geoespaciales, análisis de datos y participación comunitaria para mejorar la transparencia, reducir conflictos y apoyar el desarrollo rural sostenible alineado con las políticas nacionales.",
+        "fr": "Le domaine Tenure foncière de l'Organisation des Nations Unies pour l'alimentation et l'agriculture (FAO) en Colombie soutient un accès sûr et équitable à la terre, notamment dans les contextes ruraux et post-conflit. Il collabore avec les institutions gouvernementales pour renforcer les systèmes d'administration foncière, promouvoir la formalisation des droits de propriété et améliorer la gouvernance foncière. Le programme intègre les technologies géospatiales, l'analyse de données et la participation communautaire pour renforcer la transparence, réduire les conflits et soutenir le développement rural durable aligné sur les politiques nationales."
+      },
       "links": [
         { "label": "KoboToolbox Platform", "url": "https://kf.kobotoolbox.fao.org.co/" },
         { "label": "AI Agent FAO", "url": "https://aiagent.fao.org.co/" },
         { "label": "AI Chat FAO", "url": "https://aichat.fao.org.co/" }
       ],
       "achievements": {
-        "es": [
-          "Establecí e implementé metodologías y herramientas de administración SIG para adquisición de datos, coordinación con el IGAC, control de calidad y actualización del sistema.",
-          "Desarrollé e implementé soluciones tecnológicas avanzadas para recolección de datos en campo usando KoboToolbox y ODK.",
-          "Desarrollé flujos de procesamiento ETL usando Pentaho para integración y estandarización de datos.",
-          "Construí agentes de IA para automatización de tareas, bots en aplicaciones web y WhatsApp, y análisis de hojas de vida.",
-          "Gestioné y mantuve modelos de datos LADM-COL y XTF garantizando consistencia y cumplimiento con estándares del proyecto.",
-          "Optimicé configuraciones de base de datos PostgreSQL/PostGIS para datos espaciales y alfanuméricos.",
-          "Diseñé y generé dashboards y mapas temáticos para entregables y requerimientos de stakeholders."
-        ],
         "en": [
-          "Established and implemented GIS administration methodologies and tools for data acquisition, coordination with IGAC, quality control, and system updates.",
-          "Developed and deployed advanced technological solutions for field data collection using KoboToolbox and ODK.",
-          "Developed ETL data processing workflows using Pentaho for data integration and standardization.",
-          "Built AI agents to automate tasks, using bots in web applications and WhatsApp, and analyzing CVs.",
-          "Managed and maintained LADM-COL and XTF data models to ensure data consistency and compliance with project standards.",
-          "Optimized PostgreSQL/PostGIS database configurations for spatial and alphanumeric data.",
-          "Designed and generated dashboards and thematic maps to meet project deliverables and stakeholder requirements."
+          "Led the design, implementation, and maintenance of enterprise GIS and spatial databases to support national land administration programs.",
+          "Developed QA/QC workflows ensuring data integrity, consistency, and compliance with LADM-COL standards (Cartographic standards compliance).",
+          "Designed and maintained PostgreSQL/PostGIS geodatabases, optimizing performance and data accessibility across multiple users.",
+          "Created ETL and automation scripts in Python, Pentaho, and FME to streamline data processing and updates.",
+          "Supported the publication of spatial datasets and Open Data deliverables, improving accessibility for decision-making.",
+          "Conducted spatial analysis and cartographic production using ArcGIS Pro and QGIS to support cadastral, legal, and planning activities.",
+          "Developed and deployed field data collection systems using KoboToolbox, Survey123, and ODK, ensuring synchronization and validation of field data.",
+          "Delivered technical training to multidisciplinary teams, strengthening capacity in GIS and data management practices.",
+          "Coordinated partnerships with national institutions (e.g., IGAC) to ensure data alignment and interoperability across platforms.",
+          "Created dashboards and interactive map products supporting land governance and project reporting.",
+          "Developed ETL data processing workflows using Pentaho and N8N.",
+          "Used AI agents to automate tasks, using bots in web applications and WhatsApp, and analyzing CVs.",
+          "Coordinated more than 180 people in different Colombian territories."
+        ],
+        "es": [
+          "Lideré el diseño, implementación y mantenimiento de bases de datos GIS empresariales para apoyar programas nacionales de administración de tierras.",
+          "Desarrollé flujos QA/QC garantizando la integridad, consistencia y cumplimiento de los datos con estándares LADM-COL (cumplimiento de estándares cartográficos).",
+          "Diseñé y mantuve geodatabases PostgreSQL/PostGIS, optimizando el rendimiento y la accesibilidad de datos para múltiples usuarios.",
+          "Creé scripts ETL y de automatización en Python, Pentaho y FME para agilizar el procesamiento y actualización de datos.",
+          "Apoyé la publicación de conjuntos de datos espaciales y entregables de Open Data, mejorando la accesibilidad para la toma de decisiones.",
+          "Realicé análisis espacial y producción cartográfica con ArcGIS Pro y QGIS para actividades catastrales, legales y de planificación.",
+          "Desarrollé y desplegué sistemas de recolección de datos en campo con KoboToolbox, Survey123 y ODK, garantizando sincronización y validación.",
+          "Impartí capacitación técnica a equipos multidisciplinarios, fortaleciendo capacidades en SIG y gestión de datos.",
+          "Coordiné alianzas con instituciones nacionales (ej. IGAC) para garantizar la alineación e interoperabilidad de datos entre plataformas.",
+          "Creé dashboards y productos de mapas interactivos para apoyar la gobernanza de tierras y los informes del proyecto.",
+          "Desarrollé flujos de procesamiento ETL usando Pentaho y N8N.",
+          "Utilicé agentes de IA para automatizar tareas, implementando bots en aplicaciones web y WhatsApp, y analizando hojas de vida.",
+          "Coordiné más de 180 personas en diferentes territorios colombianos."
         ],
         "fr": [
-          "Établi et mis en œuvre des méthodologies et outils d'administration SIG pour l'acquisition de données, la coordination avec l'IGAC, le contrôle de qualité et les mises à jour du système.",
-          "Développé et déployé des solutions technologiques avancées pour la collecte de données terrain avec KoboToolbox et ODK.",
-          "Développé des flux de traitement ETL avec Pentaho pour l'intégration et la standardisation des données.",
-          "Créé des agents IA pour automatiser des tâches, utiliser des bots dans des applications web et WhatsApp, et analyser des CV.",
-          "Géré et maintenu les modèles de données LADM-COL et XTF pour assurer la cohérence et la conformité aux normes du projet.",
-          "Optimisé les configurations de base de données PostgreSQL/PostGIS pour les données spatiales et alphanumériques.",
-          "Conçu et généré des tableaux de bord et des cartes thématiques pour répondre aux livrables et aux exigences des parties prenantes."
+          "Dirigé la conception, la mise en œuvre et la maintenance de bases de données SIG d'entreprise pour soutenir les programmes nationaux d'administration foncière.",
+          "Développé des flux QA/QC garantissant l'intégrité, la cohérence et la conformité des données aux normes LADM-COL (conformité aux normes cartographiques).",
+          "Conçu et maintenu des géodatabases PostgreSQL/PostGIS, optimisant les performances et l'accessibilité pour plusieurs utilisateurs.",
+          "Créé des scripts ETL et d'automatisation en Python, Pentaho et FME pour rationaliser le traitement et la mise à jour des données.",
+          "Soutenu la publication de jeux de données spatiales et de livrables Open Data, améliorant l'accessibilité pour la prise de décision.",
+          "Réalisé des analyses spatiales et une production cartographique avec ArcGIS Pro et QGIS pour des activités cadastrales, juridiques et de planification.",
+          "Développé et déployé des systèmes de collecte de données terrain avec KoboToolbox, Survey123 et ODK, assurant la synchronisation et la validation.",
+          "Dispensé des formations techniques à des équipes multidisciplinaires, renforçant les capacités en SIG et gestion des données.",
+          "Coordonné des partenariats avec des institutions nationales (ex. IGAC) pour assurer l'alignement et l'interopérabilité des données entre plateformes.",
+          "Créé des tableaux de bord et des produits cartographiques interactifs pour la gouvernance foncière et le reporting du projet.",
+          "Développé des flux de traitement ETL avec Pentaho et N8N.",
+          "Utilisé des agents IA pour automatiser des tâches, déployant des bots dans des applications web et WhatsApp, et analysant des CV.",
+          "Coordonné plus de 180 personnes dans différents territoires colombiens."
         ]
       }
     },
@@ -130,6 +153,11 @@
       },
       "period": "Jun 2023 – Ago 2024",
       "location": "Bogotá, Colombia",
+      "description": {
+        "en": "The United Nations Development Programme (UNDP) Sustainable Development area in Colombia supports inclusive economic growth, environmental sustainability, and resilience to climate change.",
+        "es": "El área de Desarrollo Sostenible del Programa de las Naciones Unidas para el Desarrollo (PNUD) en Colombia apoya el crecimiento económico inclusivo, la sostenibilidad ambiental y la resiliencia al cambio climático.",
+        "fr": "Le domaine Développement durable du Programme des Nations Unies pour le développement (PNUD) en Colombie soutient une croissance économique inclusive, la durabilité environnementale et la résilience au changement climatique."
+      },
       "current": false,
       "links": [
         { "label": "ArcGIS Experience", "url": "https://experience.arcgis.com/experience/fb52274236294685b0f3b39bf842483d/page/Portada/" },
@@ -167,6 +195,11 @@
       "period": "May 2020 – Feb 2023",
       "location": "Bogotá, Colombia",
       "current": false,
+      "description": {
+        "en": "The Food and Agriculture Organization of the United Nations (FAO) Land Tenure area in Colombia supports secure and equitable access to land, especially in rural and post-conflict contexts. It works with government institutions to strengthen land administration systems, promote formalization of property rights, and improve land governance. The program integrates geospatial technologies, data analysis, and community participation to enhance transparency, reduce conflicts, and support sustainable rural development aligned with national policies.",
+        "es": "El área de Tenencia de la Tierra de la FAO en Colombia apoya el acceso seguro y equitativo a la tierra, especialmente en contextos rurales y de posconflicto. Trabaja con instituciones gubernamentales para fortalecer los sistemas de administración de tierras, promover la formalización de derechos de propiedad y mejorar la gobernanza de la tierra. El programa integra tecnologías geoespaciales, análisis de datos y participación comunitaria para mejorar la transparencia, reducir conflictos y apoyar el desarrollo rural sostenible.",
+        "fr": "Le domaine Tenure foncière de la FAO en Colombie soutient un accès sûr et équitable à la terre, notamment dans les contextes ruraux et post-conflit. Il collabore avec les institutions gouvernementales pour renforcer les systèmes d'administration foncière, promouvoir la formalisation des droits de propriété et améliorer la gouvernance foncière. Le programme intègre les technologies géospatiales, l'analyse de données et la participation communautaire pour renforcer la transparence et soutenir le développement rural durable."
+      },
       "links": [],
       "achievements": {
         "es": [
@@ -205,6 +238,11 @@
       },
       "period": "Sep 2020 – Dic 2022",
       "location": "Bogotá, Colombia",
+      "description": {
+        "en": "The Instituto Distrital de Patrimonio Cultural (IDPC) is a public institution in Bogotá, Colombia, responsible for protecting, managing, and promoting the city's cultural heritage. It works to preserve historical sites, cultural landscapes, and intangible traditions through research, restoration, and community engagement. The organization also supports urban planning processes by integrating heritage conservation into development policies, ensuring that cultural identity and historical value are maintained while the city evolves.",
+        "es": "El Instituto Distrital de Patrimonio Cultural (IDPC) es una entidad pública de Bogotá, Colombia, responsable de proteger, gestionar y promover el patrimonio cultural de la ciudad. Trabaja para preservar sitios históricos, paisajes culturales y tradiciones inmateriales mediante investigación, restauración y participación comunitaria. La organización también apoya los procesos de planeación urbana integrando la conservación del patrimonio en las políticas de desarrollo, asegurando que la identidad cultural y el valor histórico se mantengan mientras la ciudad evoluciona.",
+        "fr": "L'Instituto Distrital de Patrimonio Cultural (IDPC) est une institution publique de Bogotá, Colombie, chargée de protéger, gérer et promouvoir le patrimoine culturel de la ville. Il œuvre à la préservation des sites historiques, des paysages culturels et des traditions immatérielles à travers la recherche, la restauration et l'engagement communautaire. L'organisation soutient également les processus de planification urbaine en intégrant la conservation du patrimoine dans les politiques de développement, garantissant que l'identité culturelle et la valeur historique sont préservées au fil de l'évolution de la ville."
+      },
       "current": false,
       "links": [],
       "achievements": {
@@ -266,6 +304,11 @@
       "period": "Oct 2012 – Mar 2019",
       "location": "Colombia",
       "current": false,
+      "description": {
+        "en": "The United Nations Office on Drugs and Crime (UNODC) Alternative Development area in Colombia promotes sustainable livelihoods for communities affected by illicit crop cultivation. It supports the transition to legal economies through rural development, technical assistance, and market access for alternative products. Working with government and local partners, it strengthens value chains, land use planning, and community organization, contributing to poverty reduction, environmental protection, and long-term stability in post-conflict regions.",
+        "es": "El área de Desarrollo Alternativo de la Oficina de las Naciones Unidas contra la Droga y el Delito (UNODC) en Colombia promueve medios de vida sostenibles para comunidades afectadas por cultivos ilícitos. Apoya la transición hacia economías legales a través del desarrollo rural, asistencia técnica y acceso a mercados para productos alternativos. Trabajando con el gobierno y socios locales, fortalece cadenas de valor, ordenamiento territorial y organización comunitaria, contribuyendo a la reducción de la pobreza, la protección ambiental y la estabilidad a largo plazo en regiones de posconflicto.",
+        "fr": "Le domaine Développement alternatif de l'Office des Nations Unies contre la drogue et le crime (ONUDC) en Colombie promeut des moyens de subsistance durables pour les communautés touchées par les cultures illicites. Il soutient la transition vers des économies légales grâce au développement rural, à l'assistance technique et à l'accès aux marchés pour les produits alternatifs. En collaboration avec le gouvernement et les partenaires locaux, il renforce les chaînes de valeur, la planification de l'utilisation des terres et l'organisation communautaire, contribuant à la réduction de la pauvreté, à la protection de l'environnement et à la stabilité à long terme dans les régions post-conflit."
+      },
       "links": [
         { "label": "UNODC Danet", "url": "https://danet.unodc.org.co/" },
         { "label": "GIZ Geospatial Cooperation", "url": "https://danet.unodc.org.co/Cooperacion_GIZ_visorgeo" }
@@ -409,7 +452,9 @@
       },
       "period": "2020 – 2022",
       "technologies": ["ArcGIS", "PostgreSQL", "JavaScript", "Full-Stack", "Web Mapping"],
-      "links": [],
+      "links": [
+        { "label": "SISBIC Platform", "url": "https://sisbic.idpc.gov.co/" }
+      ],
       "highlights": {
         "es": ["Base de datos robusta para patrimonio cultural", "Visor geográfico interactivo con ArcGIS", "Plataforma web full-stack integrada"],
         "en": ["Robust database for cultural heritage", "Interactive geographic viewer with ArcGIS", "Integrated full-stack web platform"],

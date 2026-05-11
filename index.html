@@ -332,7 +332,8 @@
       background: var(--card); padding: 2px 8px;
       border-radius: 5px; white-space: nowrap;
     }
-    .exp-company { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 9px; }
+    .exp-company { font-size: 13px; color: var(--accent); font-weight: 500; margin-bottom: 6px; }
+    .exp-description { font-size: 12px; color: var(--fg-muted); line-height: 1.6; margin-bottom: 10px; font-style: italic; }
     .exp-badge {
       display: inline-block; font-size: 10px;
       background: var(--accent-bg); color: var(--accent);
@@ -826,7 +827,7 @@ function buildExperience() {
   const tx = t();
   let html = `<p style="margin-bottom:14px;">${esc(tx.responses.experienceIntro)}</p>`;
   (resumeData.experience || []).forEach((exp, i) => {
-    const achievements = (exp.achievements[currentLang] || exp.achievements['en'] || []).slice(0,3);
+    const achievements = exp.achievements[currentLang] || exp.achievements['en'] || [];
     const links = (exp.links || []).map(l => `<a href="${esc(l.url)}" class="exp-link" target="_blank" rel="noopener">${esc(l.label)} ↗</a>`).join('');
     const reveal = `opacity:0;animation:revealItem 0.45s ease forwards;animation-delay:${i * 0.55}s;`;
     html += `
@@ -836,6 +837,7 @@ function buildExperience() {
           <span class="exp-period">${esc(exp.period)}</span>
         </div>
         <div class="exp-company">${esc(exp.company)} · ${esc(exp.location)}</div>
+        ${exp.description ? `<div class="exp-description">${esc(tr(exp.description))}</div>` : ''}
         <ul class="exp-list">${achievements.map(a => `<li>${esc(a)}</li>`).join('')}</ul>
         ${links ? `<div class="exp-links">${links}</div>` : ''}
       </div>
